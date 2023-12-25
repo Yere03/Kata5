@@ -4,8 +4,6 @@ import spark.Request;
 import spark.Response;
 import spark.Spark;
 
-import java.util.Spliterator;
-
 public class Main {
     public static void main(String[] args) {
         Spark.port(8080);

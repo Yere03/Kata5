@@ -8,7 +8,11 @@ import static software.ulpgc.Command.output;
 public class FactorialCommand implements Command{
     @Override
     public Output execute(Input input) {
-        return factorial(input.get("number"));
+        try {
+            return factorial(input.get("number"));
+        } catch (NumberFormatException exception){
+            return output(406,null) ;
+        }
     }
 
     private Output factorial(String number) {return factorial(parseInt(number));
