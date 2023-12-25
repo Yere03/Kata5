@@ -22,9 +22,15 @@ public class Main {
         private Command.Input input() {
             return new Command.Input() {
                 @Override
-                public String get(String key) {return OnOfThose(request.queryParams(key),request.params(key));}
+                public String get(String key) {
+                    return OnOfThose(request.queryParams(key), request.params(key));
+                }
 
-                private String OnOfThose(String a, String b) {return a != null ? a : b;}
+                private String OnOfThose(String a, String b) {
+                    return a != null ? a : b;
+                }
             };
+
+        }
     }
 }
